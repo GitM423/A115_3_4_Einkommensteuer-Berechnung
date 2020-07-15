@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Einkommensteuer-Berechnung</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <h1>Einkommensteuer-Berechnung</h1>
+    <div>
+
+        <div>
+            <h3>Bitte das Jahr wählen, für das die Einkommensteuer berechnet werden soll.</h3>
+            <input type="radio" name="year" id="y2015" onclick="checkYear()">
+            <label for="y2015">2015</label>
+            <input type="radio" name="year" id="y2016" onclick="checkYear()">
+            <label for="y2016">2016</label>
+            <input type="radio" name="year" id="y2017" onclick="checkYear()">
+            <label for="y2017">2017</label>
+            <input type="radio" name="year" id="y2018" onclick="checkYear()">
+            <label for="y2018">2018</label>
+            <input type="radio" name="year" id="y2019" onclick="checkYear()">
+            <label for="y2019">2019</label>
+            <input type="radio" name="year" id="y2020" onclick="checkYear()" checked>
+            <label for="y2020">2020</label>
+        </div>
+
+        <div>
+            <h3>Bitte auswählen, ob die Einkommensteuer für eine alleinstehende Person oder zwei Personen berechnet
+                werden soll.</h3>
+            <input type="radio" name="rate" id="base" onclick="checkRate()" checked>
+            <label for="base">1 Person (Grundtarif)</label>
+            <input type="radio" name="rate" id="split" onclick="checkRate()">
+            <label for="split">2 Personen (Splittingtarif)</label>
+        </div>
+
+        <div>
+            <h3 id="zvE-request">Bitte das zu versteuernde Einkommen eintragen.</h3>
+            <label for="person1">zvE von Person 1:</label>
+            <input type="number" name="" id="person1" class="input">
+            <label for="person1">€</label>
+            <br>
+            <label for="person2">zvE von Person 2:</label>
+            <input type="number" name="" id="person2" class="input" disabled>
+            <label for="person2">€</label>
+        </div>
+
+        <input type="button" id="check" value="Berechne" onclick="checkESt()">
+
+        <div id="result"></div>
+
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
